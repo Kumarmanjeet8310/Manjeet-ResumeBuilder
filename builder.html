@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerCraft Builder - Resume and Biodata</title>
+    <meta name="description" content="Build professional resumes and marriage biodata with multiple templates and live preview.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Lora:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/builder.css">
+</head>
+<body>
+    <header class="topbar builder-topbar">
+        <div class="container nav-wrap builder-nav">
+            <a class="brand" href="index.html">
+                <span class="brand-mark">CC</span>
+                <span class="brand-text">CareerCraft Builder</span>
+            </a>
+            <div class="builder-actions">
+                <button class="btn btn-outline" id="saveDraftBtn"><i class="fa-solid fa-floppy-disk"></i> Save</button>
+                <button class="btn btn-outline" id="resetBtn"><i class="fa-solid fa-arrow-rotate-left"></i> Reset</button>
+                <button class="btn btn-primary" id="downloadBtn"><i class="fa-solid fa-file-pdf"></i> Download PDF</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="builder-main container">
+        <section class="editor-panel">
+            <div class="panel-head">
+                <h1>Create Your Document</h1>
+                <p>Switch between job resume and marriage biodata. Pick a template style and edit details.</p>
+            </div>
+
+            <div class="control-grid">
+                <label class="control-block">
+                    <span>Document Type</span>
+                    <select id="modeSelect">
+                        <option value="resume">Job Resume</option>
+                        <option value="biodata">Marriage Biodata</option>
+                    </select>
+                </label>
+                <label class="control-block">
+                    <span>Template Style</span>
+                    <select id="templateSelect"></select>
+                </label>
+            </div>
+
+            <div class="form-stack">
+                <article class="section-card">
+                    <h2>Basic Profile</h2>
+                    <div class="grid-2">
+                        <label>
+                            <span>Full Name</span>
+                            <input id="fullName" type="text" placeholder="Enter full name">
+                        </label>
+                        <label>
+                            <span>Headline</span>
+                            <input id="headline" type="text" placeholder="e.g. Product Manager">
+                        </label>
+                        <label>
+                            <span>Email</span>
+                            <input id="email" type="email" placeholder="name@email.com">
+                        </label>
+                        <label>
+                            <span>Phone</span>
+                            <input id="phone" type="text" placeholder="+1 234 567 8910">
+                        </label>
+                        <label>
+                            <span>Location</span>
+                            <input id="location" type="text" placeholder="City, Country">
+                        </label>
+                        <label>
+                            <span>Profile Photo URL (optional)</span>
+                            <input id="photoUrl" type="url" placeholder="https://example.com/photo.jpg">
+                        </label>
+                    </div>
+                </article>
+
+                <div id="resumeFields">
+                    <article class="section-card">
+                        <h2>Resume Summary</h2>
+                        <label>
+                            <span>Professional Summary</span>
+                            <textarea id="summary" rows="4" placeholder="Brief summary for your target role."></textarea>
+                        </label>
+                    </article>
+
+                    <article class="section-card">
+                        <h2>Skills</h2>
+                        <label>
+                            <span>Skills (comma separated)</span>
+                            <input id="skills" type="text" placeholder="Leadership, React, Sales, Figma">
+                        </label>
+                    </article>
+
+                    <article class="section-card">
+                        <div class="section-title-row">
+                            <h2>Work Experience</h2>
+                            <button class="btn btn-outline mini" type="button" id="addExperienceBtn"><i class="fa-solid fa-plus"></i> Add</button>
+                        </div>
+                        <div id="experienceList" class="item-list"></div>
+                    </article>
+
+                    <article class="section-card">
+                        <div class="section-title-row">
+                            <h2>Education</h2>
+                            <button class="btn btn-outline mini" type="button" id="addEducationBtn"><i class="fa-solid fa-plus"></i> Add</button>
+                        </div>
+                        <div id="educationList" class="item-list"></div>
+                    </article>
+
+                    <article class="section-card">
+                        <div class="section-title-row">
+                            <h2>Projects</h2>
+                            <button class="btn btn-outline mini" type="button" id="addProjectBtn"><i class="fa-solid fa-plus"></i> Add</button>
+                        </div>
+                        <div id="projectList" class="item-list"></div>
+                    </article>
+                </div>
+
+                <div id="biodataFields">
+                    <article class="section-card">
+                        <h2>About</h2>
+                        <label>
+                            <span>Short Introduction</span>
+                            <textarea id="biodataAbout" rows="4" placeholder="Brief introduction about personality and values."></textarea>
+                        </label>
+                    </article>
+
+                    <article class="section-card">
+                        <h2>Personal Details</h2>
+                        <div class="grid-2">
+                            <label><span>Date of Birth</span><input id="dob" type="date"></label>
+                            <label><span>Age</span><input id="age" type="text" placeholder="26"></label>
+                            <label><span>Height</span><input id="height" type="text" placeholder="5 ft 6 in"></label>
+                            <label><span>Weight</span><input id="weight" type="text" placeholder="60 kg"></label>
+                            <label><span>Religion</span><input id="religion" type="text" placeholder="Religion"></label>
+                            <label><span>Caste / Community</span><input id="caste" type="text" placeholder="Community"></label>
+                            <label><span>Mother Tongue</span><input id="motherTongue" type="text" placeholder="Language"></label>
+                            <label><span>Marital Status</span><input id="maritalStatus" type="text" placeholder="Never Married"></label>
+                            <label><span>Occupation</span><input id="occupation" type="text" placeholder="Software Engineer"></label>
+                            <label><span>Annual Income</span><input id="income" type="text" placeholder="$70,000"></label>
+                        </div>
+                    </article>
+
+                    <article class="section-card">
+                        <h2>Family Details</h2>
+                        <div class="grid-2">
+                            <label><span>Father's Name</span><input id="fatherName" type="text" placeholder="Name"></label>
+                            <label><span>Mother's Name</span><input id="motherName" type="text" placeholder="Name"></label>
+                            <label><span>Brothers</span><input id="brothers" type="text" placeholder="1"></label>
+                            <label><span>Sisters</span><input id="sisters" type="text" placeholder="1"></label>
+                            <label><span>Family Type</span><input id="familyType" type="text" placeholder="Nuclear"></label>
+                            <label><span>Family Location</span><input id="familyLocation" type="text" placeholder="Delhi, India"></label>
+                        </div>
+                    </article>
+
+                    <article class="section-card">
+                        <h2>Lifestyle</h2>
+                        <div class="grid-2">
+                            <label><span>Diet</span><input id="diet" type="text" placeholder="Vegetarian"></label>
+                            <label><span>Smoking</span><input id="smoking" type="text" placeholder="No"></label>
+                            <label><span>Drinking</span><input id="drinking" type="text" placeholder="No"></label>
+                            <label><span>Hobbies</span><input id="hobbies" type="text" placeholder="Reading, Travel"></label>
+                        </div>
+                    </article>
+
+                    <article class="section-card">
+                        <h2>Partner Preferences</h2>
+                        <label>
+                            <span>Expectations</span>
+                            <textarea id="partnerPreference" rows="4" placeholder="Preferred education, values, location, etc."></textarea>
+                        </label>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <aside class="preview-panel">
+            <div class="preview-head">
+                <h2>Live Preview</h2>
+                <span class="preview-note">Updates automatically</span>
+            </div>
+            <div class="preview-paper resume-elegant" id="previewPaper"></div>
+        </aside>
+    </main>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="js/builder.js"></script>
+</body>
+</html>

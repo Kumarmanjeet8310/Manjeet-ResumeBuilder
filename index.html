@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manjeet's Resume Builder</title>
+    <meta name="description" content="Create professional job resumes and marriage biodata in multiple styles with live preview and PDF download.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Lora:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="site-bg" aria-hidden="true"></div>
+
+    <header class="topbar">
+        <div class="container nav-wrap">
+            <a class="brand" href="#home">
+                <span class="brand-mark">MRB</span>
+                <span class="brand-text">MY RESUME BUILDER</span>
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav-links" id="navLinks">
+                <a href="#features">Features</a>
+                <a href="#styles">Styles</a>
+                <a href="#process">Process</a>
+                <a href="builder.html" class="btn btn-primary">Open Builder</a>
+                <a href="#about" class="about-btn">👤About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="home">
+        <section class="hero">
+            <div class="container hero-grid">
+                <div>
+                    <p class="eyebrow">Professional Document Builder</p>
+                    <h1>Create Job Resumes and Marriage Biodata in Minutes</h1>
+                    <p class="hero-copy">Pick a template, fill your details, and export polished PDFs. Made for job seekers and families who need clean, presentable formats quickly.</p>
+                    <div class="hero-actions">
+                        <a href="builder.html?mode=resume" class="btn btn-primary btn-lg">Build Resume</a>
+                        <a href="builder.html?mode=biodata" class="btn btn-outline btn-lg">Make Biodata</a>
+                    </div>
+                </div>
+                <div class="hero-panel">
+                    <div class="quick-card">
+                        <h3>Resume Maker</h3>
+                        <p>Multiple styles, live preview, editable sections for experience, education, and projects.</p>
+                        <a href="builder.html?mode=resume">Use Resume Templates <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="quick-card alt">
+                        <h3>Marriage Biodata Maker</h3>
+                        <p>Dedicated sections for personal, family, lifestyle, and partner preferences.</p>
+                        <a href="builder.html?mode=biodata">Use Biodata Templates <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature-section" id="features">
+            <div class="container">
+                <h2>Everything needed for professional documents</h2>
+                <div class="feature-grid reveal-group">
+                    <article class="feature-card reveal-item">
+                        <i class="fa-solid fa-layer-group"></i>
+                        <h3>Many Templates</h3>
+                        <p>Resume and biodata styles for modern, classic, minimal, and premium looks.</p>
+                    </article>
+                    <article class="feature-card reveal-item">
+                        <i class="fa-solid fa-eye"></i>
+                        <h3>Live Preview</h3>
+                        <p>See your output instantly while typing so formatting stays under your control.</p>
+                    </article>
+                    <article class="feature-card reveal-item">
+                        <i class="fa-solid fa-file-pdf"></i>
+                        <h3>PDF Export</h3>
+                        <p>Download ready-to-share PDF versions without extra tools or subscriptions.</p>
+                    </article>
+                    <article class="feature-card reveal-item">
+                        <i class="fa-solid fa-floppy-disk"></i>
+                        <h3>Auto Save</h3>
+                        <p>Your progress is saved locally in the browser while you work.</p>
+                    </article>
+                    <article class="feature-card reveal-item">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <h3>Mobile Friendly</h3>
+                        <p>Designed for desktop and mobile with responsive form and preview layout.</p>
+                    </article>
+                    <article class="feature-card reveal-item">
+                        <i class="fa-solid fa-lock"></i>
+                        <h3>Privacy Focused</h3>
+                        <p>Data stays in your browser unless you decide to export and share it.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="styles-section" id="styles">
+            <div class="container">
+                <h2>Template Styles</h2>
+                <div class="style-grid">
+                    <div class="style-card">
+                        <div class="style-swatch resume-a"></div>
+                        <h3>Resume Elegant</h3>
+                    </div>
+                    <div class="style-card">
+                        <div class="style-swatch resume-b"></div>
+                        <h3>Resume Corporate</h3>
+                    </div>
+                    <div class="style-card">
+                        <div class="style-swatch resume-c"></div>
+                        <h3>Resume Minimal</h3>
+                    </div>
+                    <div class="style-card">
+                        <div class="style-swatch biodata-a"></div>
+                        <h3>Biodata Classic</h3>
+                    </div>
+                    <div class="style-card">
+                        <div class="style-swatch biodata-b"></div>
+                        <h3>Biodata Royal</h3>
+                    </div>
+                    <div class="style-card">
+                        <div class="style-swatch biodata-c"></div>
+                        <h3>Biodata Modern</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="process-section" id="process">
+            <div class="container process-wrap">
+                <h2>How it works</h2>
+                <ol>
+                    <li>Choose document type: Resume or Marriage Biodata.</li>
+                    <li>Select a style template and fill in your details.</li>
+                    <li>Review live preview, save draft, then export PDF.</li>
+                </ol>
+                <a href="builder.html" class="btn btn-primary">Start Building</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-wrap">
+            <p>Professional Resume & Biodata Builder </p>
+            <p>Create Professional Resumes and Biodata in minutes</p>
+        </div>
+    </footer>
+    </footer>
+
+<section id="about">
+<h2>About Developer</h2>
+<h3>Manjeet Kumar</h3>
+<p>B.Tech CSE Student</p>
+<P>Vivekananda Global University Jaipur</P>
+<p>I developed this Resume Builder website using HTML, CSS and JavaScript.</p>
+</section>
+
+<script src="js/main.js"></script>
+
+</body>
+<footer>
+<p>© 2026 Manjeet's Resume Builder</p>
+<p>Developed by Manjeet Kumar | B.Tech CSE Student</p>
+</footer>
+</html>
+
